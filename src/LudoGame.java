@@ -15,10 +15,12 @@ public class LudoGame {
         Dice dice = new Dice();
         Board ludoBoard = new Board();
         System.out.println("Game started");
-        ludoBoard.displayBoard();
+        Coin coin = new Coin();
 
-        for (Player player : players) {
-            player.play(dice, ludoBoard);
+        while (true) {
+            for (Player player : players) {
+                player.play(dice, ludoBoard);
+            }
         }
     }
 }
